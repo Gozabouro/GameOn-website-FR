@@ -69,7 +69,7 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  /*Ajout de marge pour topnav + largeur pour logo afin d'améliorer responsive*/
+  /*Ajout de marge pour topnav + largeur pour logo afin d'améliorer design responsive*/
   .topnav{
     margin: 30px;
   }
