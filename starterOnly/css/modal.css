@@ -511,9 +511,9 @@ footer {
     font-size: 2.5rem;
     white-space: normal;
   }
-    /* 1. Réduction font-size pour marquer contraste avec titre et faire apparaître totalité du texte
-       2. Ajout width auto pour que texte soit visible et s'adapte au navigateur
-       3.Ajout d'une marge verticale pour que soient visibles le header, body and footer*/
+    /* 1. Réduction font-size pour marquer contraste avec titre et faire apparaître totalité du texte. 
+       2. Ajout width auto pour que texte soit visible et s'adapte au navigateur. 
+       3.Ajout d'une marge verticale pour que soient visibles le header, body and footer. */
   .hero-text {
     width: 80%;
     font-size: 0.8rem;
