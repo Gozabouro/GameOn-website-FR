@@ -4,6 +4,9 @@ Créez une landing page avec Javascript: Game On
 
 "Vous avez récemment été embauché comme développeur Front-End junior dans une PME, GameOn, spécialisée dans les conférences et les concours de jeux. Vous avez fait du shadowing de votre développeur principal, Erika, pour suivre son travail au quotidien."
 
+<a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/Gozabouro/GameOn-website-FR/master/starterOnly/img/Gameon.jpg">
+<img src="https://raw.githubusercontent.com/Gozabouro/GameOn-website-FR/master/starterOnly/img/Gameon.jpg">
+</a>
 
 
 Pour commencer
