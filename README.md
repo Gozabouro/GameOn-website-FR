@@ -1,5 +1,34 @@
-# Projet GameOn
-1. Forkez ce repo ;
-2. Il est conseillé d'utiliser VisualStudio Code et vous pouvez utiliser Docker, mais ce n'est pas obligatoire ;
-3. Il n'y a aucune dépendance ;
-4. Vous ne devez utiliser que du CSS personnalisé et du JavaScript pur, sans jQuery, Bootstrap ou autre librairie.
+OpenClassrooms Projet 4 :
+
+Créez une landing page avec Javascript: Game On
+
+"Vous avez récemment été embauché comme développeur Front-End junior dans une PME, GameOn, spécialisée dans les conférences et les concours de jeux. Vous avez fait du shadowing de votre développeur principal, Erika, pour suivre son travail au quotidien."
+
+
+
+Pour commencer
+
+Ce projet s'inscrit dans le cadre de la formation "Développeur Front-End" proposée par OpenClassrooms.
+
+Consignes
+
+    Mettre en œuvre des effets CSS graphiques avancés
+
+    Assurer la cohérence graphique d'un site web
+
+    Mettre en place une structure de navigation pour un site web
+
+Pré-requis
+
+    Apprenez à programmer avec JavaScript
+
+    Ecrivez du JavaScript pour le web
+
+    Connaissances en CSS pour animations et responsive
+
+
+Méthodologie :
+
+1. Forker le répo de référence et support sur lequel coder le projet : https://github.com/OpenClassrooms-Student-Center/GameOn-website-FR/
+2. S'attaquer aux problèmes déjà solubles grâce aux connaissances précédemment acquises : Responsive CSS
+3. 

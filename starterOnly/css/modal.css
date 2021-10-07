@@ -69,11 +69,19 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+  /*Ajout de marge pour topnav + largeur pour logo afin d'améliorer responsive*/
+  .topnav{
+    margin: 30px;
+  }
+  .header-logo img{
+    width: 140px;
+  }
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
   }
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -173,8 +181,10 @@ main {
   margin: 5% auto;
   width: 100%;
   max-width: 500px;
-  animation-name: modalopen;
-  animation-duration: var(--modal-duration);
+  -webkit-animation-name: modalopen;
+          animation-name: modalopen;
+  -webkit-animation-duration: var(--modal-duration);
+          animation-duration: var(--modal-duration);
   background: #232323;
   border-radius: 10px;
   overflow: hidden;
@@ -405,7 +415,8 @@ input[data-error]::after {
   font-size: 16px;
 }
 .hero-section {
-  min-height: 93vh;
+  /* Suppression du min-height: 93vh pour centrer l'affichage main et optimiser responsive : tout doit
+  être visible peu importe la taille du navigateur*/
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -483,10 +494,11 @@ footer {
     display: block;
     box-shadow: unset;
   }
+    /*Réduction des écarts des remplissage pour tout rendre apparent sur petit navigateur*/
   .hero-content {
     background: #fff;
     color: #000;
-    padding: 20px;
+    padding: 0px;
   }
   .hero-content::after {
     content: unset;
@@ -494,13 +506,18 @@ footer {
   .hero-content .btn-signup {
     display: none;
   }
+  /*Modification font-size pour respecter un maximum maquette et rendre headline plus propre sur petit navigateur*/
   .hero-headline {
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     white-space: normal;
   }
+    /* 1. Réduction font-size pour marquer contraste avec titre et faire apparaître totalité du texte
+       2. Ajout width auto pour que texte soit visible et s'adapte au navigateur
+       3.Ajout d'une marge verticale pour que soient visibles le header, body and footer*/
   .hero-text {
-    width: unset;
-    font-size: 1.5rem;
+    width: 80%;
+    font-size: 0.8rem;
+    margin-top: 10px;
   }
   .hero-img img {
     border-radius: 10px;
@@ -511,9 +528,21 @@ footer {
     margin: 32px auto 10px;
     padding: 12px 35px;
   }
+    /**/
   .copyrights {
-    margin-top: 50px;
+    margin-top: 0px;
+    margin-bottom: 10px;
     text-align: center;
+  }
+}
+
+@-webkit-keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -526,4 +555,3 @@ footer {
     opacity: 1;
   }
 }
-
