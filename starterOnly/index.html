@@ -65,48 +65,66 @@
               <div
                 class="formData">
                 <label>Prénom</label><br>
+                <!--ajout de l'attribut booléen Required pour critères prénom-->
                 <input
                   class="text-control"
                   type="text"
                   id="first"
                   name="first"
-                  minlength="2"
-                /><br>
+                  minlength="2" 
+                  required 
+                />
+                <!--ajout d'un span pour faire apparaître message d'erreur si input prénom non respecté -->
+                <span class="messageError" id="prenomInvalide"></span><br>
               </div>
               <div
                 class="formData">
                 <label>Nom</label><br>
+                <!--ajout de l'attribut booléen Required pour critères nom-->
                 <input
                   class="text-control"
                   type="text"
                   id="last"
                   name="last"
-                /><br>
+                  minlength="2" 
+                  required
+
+                />  <!--ajout d'un span pour faire apparaître message d'erreur si input Nom non respecté-->
+                <span class="messageError" id="nomInvalide"></span><br>
               </div>
               <div
                 class="formData">
                 <label>E-mail</label><br>
+                <!--ajout de l'attribut booléen Required pour critères email-->
                 <input
                   class="text-control"
                   type="email"
                   id="email"
                   name="email"
-                /><br>
+                  required
+                /><!--ajout d'un span pour faire apparaître message d'erreur si input e-mail non respecté-->
+                <span class="messageError" id="emailInvalide"></span><br>
               </div>
               <div
                 class="formData">
                 <label>Date de naissance</label><br>
+                <!--ajout de l'attribut booléen Required pour critères date de naissance-->
                 <input
                   class="text-control"
                   type="date"
                   id="birthdate"
                   name="birthdate"
-                /><br>
+                  required
+                /> <!--ajout d'un span pour faire apparaître message d'erreur si input date de naissance non respecté-->
+                <span class="messageError" id="DateInvalide"></span><br>
               </div>
               <div
                 class="formData">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <!--ajout de l'attribut booléen Required pour critères tournois-->
+                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" required>
+                <!--ajout d'un span pour faire apparaître message d'erreur si input tournoi non respecté-->
+                <span class="messageError" id="tournoisInvalide"></span><br>
               </div>
               <p class="text-label">Quelles villes ?</p>
               <div
@@ -196,6 +214,8 @@
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
                   Je Je souhaite être prévenu des prochains évènements.
+                  <!--ajout d'un span pour faire apparaître message d'erreur si conditions non cochées-->
+                  <br><span class="messageError" id="conditionsInvalide"></span>
                 </label>
                 <br>
               </div>
@@ -206,6 +226,11 @@
                 value="C'est parti"
               />
             </form>
+            <!--Ajout d'une nouvelle div pour faire apparaître message de prise en compte du formulaire-->
+            <div class="validation-success" id="validation-success">
+              <p>Merci! Votre formulaire a bien été pris en compte.</p>
+              <button class="btn-close">Close</button>
+            </div>
           </div>
         </div>
       </div>
