@@ -25,7 +25,7 @@ const tournois = document.getElementById("quantity");
 const tournoisInvalide = document.getElementById("tournoisInvalide");
 const CGU = document.getElementById("checkbox1");
 const CGUInvalide = document.getElementById("conditionsInvalide");
-
+const form = document.getElementById("form");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -49,14 +49,12 @@ function closeModal() {
 function validationPrenom(){
   if (prenom == null|| prenom.value.length < 2){
     prenomInvalide.textContent = "Il vous faut renseigner un prénom valide";
-    return true;
+    return false;
   } else{
     prenomInvalide.textContent = "";
-    return false;
+    return true;
   }
 }
-
-let prenomValide = validationPrenom();
 
 //validation du nom
 
@@ -69,7 +67,6 @@ function validationNom(){
     return true;
   }
 }
-let nomValide = validationNom();
 
 //validation de l'email
 function validationEmail(){
@@ -81,14 +78,14 @@ function validationEmail(){
     return true;
   }
 }
-let emailValide = validationEmail();
 
 //validation de la date de naissance 
 function validationDOB(){
   
-  let DOBValue = DOB.value;
-  let DOBDate = new Date(DOBValue);
+  const DOBValue = DOB.value;
+  const DOBDate = new Date(DOBValue);
   let DOBYear = DOBDate.getFullYear();
+
     
   if(DOBValue === "" || !/(19\d\d|20[0-3])(-\d\d){2}/ || DOBYear < 1920 || DOBYear >= 2021){
     DOBInvalide.textContent = "Il vous faut renseigner une date de naissance valide";
@@ -99,9 +96,6 @@ function validationDOB(){
     return true;
   }
 }
-console.log(DOB == "empty string")
-
-let DOBValide = validationDOB();
 
 //validation des tournois
 
@@ -114,9 +108,6 @@ function validationTournois(){
     return true;
   } 
 }
-let tournoisValides = validationTournois();
-
-
 
 //validation des CGU 
 function validationCGU () {
@@ -128,4 +119,33 @@ function validationCGU () {
     return false;
   } 
 }
-let CGUValide = validationCGU();
+//fonction pour la vérification générale de tous les champs 
+
+function validationGenerale(e){
+  e.preventDefault();
+  //check validité de tous les champs du formulaire et de facto la validation du formulaire
+  const  prenomValide = validationPrenom();
+  const nomValide = validationNom(); 
+  const emailValide = validationEmail();
+  const DOBValide = validationDOB();
+  const tournoisValides = validationTournois();
+  const CGUValide = validationCGU();
+  const formulaireValide = prenomValide && nomValide && emailValide && DOBValide && tournoisValides && CGUValide;
+  console.log(formulaireValide);
+  //affichage du message de validation (remplacer le contenu du formulaire par un message de validation)
+  if (formulaireValide){
+    form.style.display = "none";
+    console.log(form);
+    let modalSuccess = document.getElementById("validation-success");
+    modalSuccess.style.display = "flex";
+    return true;    
+  } else {
+    return false;
+
+  }
+}
+//Ecouter l'évènement click sur le bouton submit, pour valider ou non le formulaire
+const validation = document.querySelector(".btn-submit");
+validation.addEventListener("click", validationGenerale);
+// remet le formulaire à zéro après actualisation de la page
+form.reset();

@@ -35,4 +35,4 @@ Méthodologie :
 1. Forker le répo de référence et support sur lequel coder le projet : https://github.com/OpenClassrooms-Student-Center/GameOn-website-FR/
 2. S'attaquer aux problèmes déjà solubles grâce aux connaissances précédemment acquises : Responsive CSS
 3. Checker issues sur répo Github qui liste ce qu'il reste à faire puis procéder par élimination. S'attaquer aux tâches les plus facilement réglables : (dans mon cas) HTML [ajout des div/span nécéssaires pour faire appaître messages de validation et d'erreurs requis puis mise en forme CSS ]
-4. 
+4. S'attaquer aux différentes issues expliquées dans le git pour régler le problème de javascript
