@@ -135,7 +135,6 @@ function validationGenerale(e){
   //affichage du message de validation (remplacer le contenu du formulaire par un message de validation)
   if (formulaireValide){
     form.style.display = "none";
-    console.log(form);
     let modalSuccess = document.getElementById("validation-success");
     modalSuccess.style.display = "flex";
     return true;    
