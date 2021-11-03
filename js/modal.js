@@ -47,7 +47,7 @@ function closeModal() {
 
 // validation du prénom 
 function validationPrenom(){
-  if (prenom == null|| prenom.value.length < 2){
+  if (prenom == null|| prenom.value.length < 2 ||!/^[A-Za-z\-\']+$/.test(prenom.value)){
     prenomInvalide.textContent = "Il vous faut renseigner un prénom valide";
     return false;
   } else{
@@ -59,7 +59,7 @@ function validationPrenom(){
 //validation du nom
 
 function validationNom(){
-  if (nom == null || nom.value.length < 2){
+  if (nom == null || nom.value.length < 2 || !/^[A-Za-z\-\']+$/.test(nom.value)){
     nomInvalide.textContent = "Vous devez renseigner un nom valide";
     return false;
   }else{
